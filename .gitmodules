@@ -1,0 +1,6 @@
+[submodule "helius-rust-sdk"]
+	path = helius-rust-sdk
+	url = https://github.com/shuimuliang/helius-rust-sdk.git
+[submodule "pumpfun-rs"]
+	path = pumpfun-rs
+	url = https://github.com/shuimuliang/pumpfun-rs.git

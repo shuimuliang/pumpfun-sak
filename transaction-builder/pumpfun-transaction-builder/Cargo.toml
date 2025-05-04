@@ -1,0 +1,17 @@
+[package]
+name = "pumpfun-transaction-builder"
+version = "0.1.0"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+bincode = { workspace = true }
+anchor-client = { workspace = true }
+anyhow = { workspace = true }
+pumpfun = { workspace = true }
+solana-instruction = { workspace = true }
+solana-program = { workspace = true }
+solana-sdk = { workspace = true }

@@ -1,0 +1,52 @@
+### To Do
+
+- [ ] Hooks
+    - [x] Helius Enhanced WebSocket Hooks
+        - [x] Account
+        - [x] Program
+        - [x] Parse buy instructions, extract bonding_curve/associated_bonding_curve
+    - [ ] Helius Websocket Subscription Manager
+    - [ ] Triton WebSocket Hooks
+    - [x] Triton gRPC Hooks: Pump.fun Real-time Updates for Create/Buy/Sell
+        - [x] Expand buy/sell/create instruction properties
+        - [x] Dispatch messages to queue by instructions
+- [ ] Sending Transactions on Solana
+    - [x] Helius Sending Smart Transactions
+    - [x] Helius Send Smart Transaction with jito tips
+    - [x] Helius Send Transactions by Staked Connections
+    - [x] Helius Build and Send the Optimized Transaction
+    - [ ] Send Transaction with bloXroute’s Trader API
+    - [ ] Send Raydium Liquidity Pool V4 Transaction
+    - [ ] Send Jupiter Aggregator v6 Transaction
+- [ ] Dex connector
+    - [x] Jupiter V6 Swap
+        - [x] Setup wallet
+        - [x] Get the route for a swap
+        - [x] Get the serialized transactions to perform the swap
+        - [x] Deserialize and sign the transaction
+        - [x] Execute the transaction
+        - [ ] Automatically include Jito tips in your Jupiter swap transaction
+    - [x] Pump.fun trade api, build original Transaction
+        - [x] FFI for Pump.fun
+        - [x] Pump.fun Bundle Buy Transactions Builder
+        - [ ] Pre-create PDA account for pump.fun newly created wallet
+- [x] Transaction Signer
+    - [x] Pump.fun Signer
+    - [x] Rewrite pumpfun Rust crate to isolate the signer
+- [ ] Integrate TEE provider
+- [ ] Error Handling Configuration
+- [x] Use message queue for data persistence
+    - [x] Kafka Producer(Create, Buy, Sell)
+    - [x] Convert CPI instructions to JSON and store in Kafka
+    - [x] Kafka Consumer by Rust, Python
+- [ ] Trading Infra
+    - [x] Controller, Orchestrates the trading bot
+    - [x] Configuration settings for the bot
+    - [x] Strategies for trading
+    - [x] Order Level Builder
+    - [x] Executor Handler: Manages execution of trades
+    - [x] Executors: Executes the trades
+    - [ ] Bot report: Buying, Selling, P & L calculations
+- [ ] Global completion reports
+    - [ ] Sniping ID, latency, transaction trigger status
+    - [ ] Sniping ID, latency, transaction completion status

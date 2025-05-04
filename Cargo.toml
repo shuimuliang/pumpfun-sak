@@ -1,0 +1,68 @@
+[workspace]
+resolver = "2"
+members = [
+    "hooks/helius-ws-hooks",
+    "sniping-server",
+    "transaction-builder/pumpfun-transaction-builder",
+    "transaction-builder/sol-bundle-builder",
+    "transaction-builder-examples/account-info",
+    "transaction-builder-examples/pumpfun-buy",
+    "transaction-builder-examples/helius-transaction",
+    "transaction-builder-examples/pumpfun-create-and-buy",
+    "transaction-builder-examples/pumpfun-bundle-buy",
+    "transaction-builder-examples/pumpfun-bundle-sell",
+]
+exclude = [
+    "pumpfun-rs",
+    "helius-rust-sdk",
+    "transaction-builder/pumpportal-builder", # ban transfer to casino account flip.gg
+]
+
+[workspace.package]
+authors = ["Cohuman"]
+edition = "2021"
+homepage = "https://www.cohuman.com"
+license = "MIT/Apache-2.0"
+repository = "https://github.com/CohumanSpace/cohuman-sniping.git"
+
+[workspace.dependencies]
+anyhow = "1.0"
+anchor-spl = { git = "https://github.com/coral-xyz/anchor.git", package = "anchor-spl", branch = "master" }
+anchor-lang = { git = "https://github.com/coral-xyz/anchor.git", package = "anchor-lang", branch = "master" }
+anchor-client = { git = "https://github.com/coral-xyz/anchor.git", package = "anchor-client", features = ["async"], branch = "master" }
+bincode = "1.3.3"
+chrono = "0.4"
+ctrlc = "3.4.5"
+csv = "1.3.1"
+bs58 = "0.5.1"
+clap = { version = "4.5", features = ["derive"] }
+env_logger = "0.11.6"
+hex = "0.4.3"
+helius = { path = "helius-rust-sdk", package = "helius" }
+inquire = "0.7.5"
+#jupiter-swap-api-client = "0.1.0"
+lazy_static = "1.5.0"
+log = "0.4.22"
+pumpfun-cpi = { path = "pumpfun-rs/crates/pumpfun-cpi", package = "pumpfun-cpi", version = "1.1.0" }
+pumpfun = { path = "pumpfun-rs/crates/pumpfun", package = "pumpfun", version = "2.0.0" }
+redis = { version = "0.27", features = ["tokio-comp"] }
+rdkafka = "0.37.0"
+#reqwest = { version = "0.11.27", features = ["multipart", "json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+solana-client = "=2.1.0"
+solana-instruction = "=2.1.0"
+solana-program = "=2.1.0"
+solana-rpc-client = "=2.1.0"
+solana-sdk = "=2.1.0"
+solana-transaction-status = "=2.1.0"
+spl-token = "6.0.0"
+toml = "0.8.19"
+tokio-stream = "0.1.16"
+tokio = { version = "1.37.0", features = ["full"] }
+
+[profile.release]
+strip = true       # Automatically strip symbols from the binary
+opt-level = "s"    # Optimize for size
+lto = true         # Enable link time optimization
+codegen-units = 1  # Maximize size reduction optimizations

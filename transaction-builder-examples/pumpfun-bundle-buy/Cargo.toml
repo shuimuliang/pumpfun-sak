@@ -1,0 +1,17 @@
+[package]
+name = "pumpfun-bundle-buy"
+version = "0.1.0"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+helius = { workspace = true }
+pumpfun = { workspace = true }
+pumpfun-transaction-builder = { path = "../../transaction-builder/pumpfun-transaction-builder", package = "pumpfun-transaction-builder", version = "0.1.0" }
+solana-sdk = { workspace = true }
+solana-client = { workspace = true }
+tokio = { workspace = true }

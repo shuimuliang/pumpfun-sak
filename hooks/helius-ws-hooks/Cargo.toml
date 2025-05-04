@@ -1,0 +1,40 @@
+[package]
+name = "helius-ws-hooks"
+version = "0.1.0"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+anchor-lang = { workspace = true }
+anyhow = { workspace = true }
+bs58 = { workspace = true }
+clap = { workspace = true }
+csv = { workspace = true }
+chrono = { workspace = true }
+env_logger = { workspace = true }
+hex = { workspace = true }
+helius = { workspace = true }
+lazy_static = { workspace = true }
+log = { workspace = true }
+redis = { workspace = true }
+solana-program = { workspace = true }
+solana-transaction-status = { workspace = true }
+tokio-stream = { workspace = true }
+tokio = { workspace = true }
+pumpfun-cpi = { workspace = true }
+rdkafka = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+toml = { workspace = true }
+pumpfun-transaction-builder = { path = "../../transaction-builder/pumpfun-transaction-builder", package = "pumpfun-transaction-builder", version = "0.1.0" }
+
+[dev-dependencies]
+criterion = { version = "0.5.1", features = ["async"] }
+tempfile = "3.15.0"
+
+[[bench]]
+name = "benches"
+harness = false

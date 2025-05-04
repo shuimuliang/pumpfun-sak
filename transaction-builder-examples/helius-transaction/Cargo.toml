@@ -1,0 +1,17 @@
+[package]
+name = "helius-transaction-example"
+version = "0.1.0"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+helius = { workspace = true }
+solana-client = { workspace = true }
+solana-sdk = { workspace = true }
+tokio = { workspace = true }
+solana-rpc-client = { workspace = true }
+sol-bundle-builder = { path = "../../transaction-builder/sol-bundle-builder" }
